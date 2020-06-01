@@ -34,7 +34,7 @@ public class day1 {
         if (pagecontent.toLowerCase().indexOf(search.toLowerCase()) != -1) {
             System.out.println("OK");
         }else {
-            System.out.println("Error");
+            System.out.println("Error Webpage content");
         }
     }
 
