@@ -29,10 +29,13 @@ public class day1 {
     @Test
     public void searchString() {
         // find search box and enter search string
-        //WebElement searchBox = driver.findElement(By.xpath("//h2[contains(text()[2],'AFIP')]/following-sibling::*"));
-        String str = driver.getPageSource();
-        System.out.println(str);
-
+        String pagecontent = driver.getPageSource();
+        String search="AFIP";
+        if (pagecontent.toLowerCase().indexOf(search.toLowerCase()) != -1) {
+            System.out.println("OK");
+        }else {
+            System.out.println("Error");
+        }
     }
 
     @AfterMethod
