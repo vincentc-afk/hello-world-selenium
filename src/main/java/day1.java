@@ -24,12 +24,15 @@ public class day1 {
         caps.setPlatform(Platform.LINUX);
         driver = new RemoteWebDriver(new
                 URL("http://seleniumhub:4444/wd/hub"), caps);
-        driver.get("http://google.com");
+        driver.get("http://137.74.85.248:8090/webapp");
     }
     @Test
     public void searchString() {
         // find search box and enter search string
-        WebElement searchBox = driver.findElement(By.xpath("//h2[contains(text()[2],'AFIP')]/following-sibling::*"));
+        //WebElement searchBox = driver.findElement(By.xpath("//h2[contains(text()[2],'AFIP')]/following-sibling::*"));
+        String str = driver.getPageSource();
+        System.out.println(str);
+
     }
 
     @AfterMethod
