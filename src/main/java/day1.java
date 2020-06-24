@@ -20,17 +20,17 @@ public class day1 {
     @BeforeMethod
     public void setup() throws MalformedURLException {
         DesiredCapabilities caps = new DesiredCapabilities();
-        caps.setBrowserName("firefox");
+        caps.setBrowserName("chrome");
         caps.setPlatform(Platform.LINUX);
         driver = new RemoteWebDriver(new
-                URL("http://seleniumhub:4444/wd/hub"), caps);
-        driver.get("http://51.255.211.168:8090/webapp");
+                URL("http://51.255.211.168:4444/wd/hub"), caps);
+        driver.get("http://51.255.211.168:9090/petclinic");
     }
     @Test
     public void searchString() {
         // find search box and enter search string
         String pagecontent = driver.getPageSource();
-        String search="AFIP";
+        String search="TEAM";
         if (pagecontent.toLowerCase().indexOf(search.toLowerCase()) != -1) {
             System.out.println("OK");
         }else {
