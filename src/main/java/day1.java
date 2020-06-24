@@ -23,8 +23,8 @@ public class day1 {
         caps.setBrowserName("chrome");
         caps.setPlatform(Platform.LINUX);
         driver = new RemoteWebDriver(new
-                URL("http://51.255.211.168:4444/wd/hub"), caps);
-        driver.get("http://51.255.211.168:9090/petclinic");
+                URL("http://seleniumhub:4444/wd/hub"), caps);
+        driver.get("http://137.74.61.92:8090/webapp");
     }
     @Test
     public void searchString() {
