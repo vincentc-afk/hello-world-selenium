@@ -30,7 +30,7 @@ public class day1 {
     public void searchString() {
         // find search box and enter search string
         String pagecontent = driver.getPageSource();
-        String search="AFIP";
+        String search="TEAM";
         if (pagecontent.toLowerCase().indexOf(search.toLowerCase()) != -1) {
             System.out.println("OK");
         }else {
