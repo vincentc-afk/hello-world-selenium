@@ -24,7 +24,7 @@ public class day1 {
         caps.setPlatform(Platform.LINUX);
         driver = new RemoteWebDriver(new
                 URL("http://seleniumhub:4444/wd/hub"), caps);
-        driver.get("http://54.39.94.235:8090/webapp");
+        driver.get("http://158.69.21.153:8090/webapp");
     }
     @Test
     public void searchString() {
